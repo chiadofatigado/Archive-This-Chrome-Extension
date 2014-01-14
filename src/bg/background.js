@@ -13,17 +13,17 @@ chrome.contextMenus.onClicked.addListener(function(activeTab)
 {
 
 	chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
-    var siteUrl = tabs[0].url;
-	var arquiveUrl = "http://web.archive.org/save/";
+    		var siteUrl = tabs[0].url;
+		var arquiveUrl = "http://web.archive.org/save/";
 	
-    arquiveUrl += encodeURI(siteUrl);
+	 	arquiveUrl += encodeURI(siteUrl);
 
-    // Open the page up.
-	chrome.tabs.create(
-		{
-			"url" : arquiveUrl
-		}
-	);
-});
+	 	// Open the page up.
+		chrome.tabs.create(
+			{
+				"url" : arquiveUrl
+			}
+		);
+	});
 
 });
